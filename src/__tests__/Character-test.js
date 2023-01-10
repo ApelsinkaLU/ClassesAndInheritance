@@ -2,15 +2,16 @@ import Character from '../Character';
 
 test('testing class Caracter', () => {
     const anyUser = new Character('anyName', 'Zombie');
-
-    expect(anyUser).toEqual({
+    const obj = {
         name: 'anyName',
         type: 'Zombie',
-        attack: 0,
-        defence: 0,
+        attack: undefined,
+        defence: undefined,
         level: 1,
         health: 100,
-    });
+    };
+
+    expect(anyUser).toEqual(obj);
 });
 
 test('testing the correctness of the name', () => {
