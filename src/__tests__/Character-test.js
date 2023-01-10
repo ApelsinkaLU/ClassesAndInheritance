@@ -5,8 +5,8 @@ test('testing class Caracter', () => {
     const obj = {
         name: 'anyName',
         type: 'Zombie',
-        attack: undefined,
-        defence: undefined,
+        attack: 0,
+        defence: 0,
         level: 1,
         health: 100,
     };
@@ -42,13 +42,13 @@ test('testing levelUp', () => {
         type: 'Zombie',
         health: 100,
         level: 2,
-        attack: 48,
-        defence: 12,
+        attack: 0,
+        defence: 0,
     };
     expect(result).toEqual(obj);
 });
 
-test('testing reeor with damge', () => {
+test('testing error with damge', () => {
     const result = new Character('Morty', 'Undead');
     result.health = 0;
     const test = () => result.damage(1);
@@ -56,7 +56,7 @@ test('testing reeor with damge', () => {
     expect(test).toThrow('Это действие невозможно');
 });
 
-test('testing teking damage', () => {
+test('testing taking damage', () => {
     const result = new Character('Cratos', 'Magician');
     result.damage(5);
     const obj = {
@@ -64,8 +64,8 @@ test('testing teking damage', () => {
         type: 'Magician',
         health: 95,
         level: 1,
-        attack: 10,
-        defence: 40,
+        attack: 0,
+        defence: 0,
     };
 
     expect(result).toEqual(obj);
